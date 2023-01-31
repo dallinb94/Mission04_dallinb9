@@ -1,21 +1,21 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="Mission #4" content="" />
-        <meta name="Dallin Blanc" content="" />
-        <title>My Web Page</title>
-        <link rel="icon" type="image/x-icon" href="lib/bootstrap/assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="lib/bootstrap/css/styles.css" rel="stylesheet" />
-        <link href="css/style.css" rel="stylesheet" />
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="Mission #4" content="" />
+    <meta name="Dallin Blanc" content="" />
+    <title>My Web Page</title>
+    <link rel="icon" type="image/x-icon" href="lib/bootstrap/assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="lib/bootstrap/css/styles.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
@@ -74,49 +74,53 @@
                     <!-- Divider-->
                     <hr class="my-4" />
                     <!-- Post preview-->
-                    <div class="post-preview">
-                        <h2 class="post-title">Grade Calculator</h2>
-                        <h6>Enter the grade weight (as a percentage) for each type of grade</h6>
-                        <label>Assignments: </label>
-                        <input id="assignment" type="number" min="0" max="99" />
-                        <br />
-                        <label>Group Project: </label>
-                        <input id="group" type="number" min="0" max="99" />
-                        <br />
-                        <label>Quizzes: </label>
-                        <input id="quiz" type="number" min="0" max="99" />
-                        <br />
-                        <label>Midterm Exam: </label>
-                        <input id="midterm" type="number" min="0" max="99" />
-                        <br />
-                        <label>Final Exam: </label>
-                        <input id="final" type="number" min="0" max="99" />
-                        <br />
-                        <label>INTEX: </label>
-                        <input id="intex" type="number" min="0" max="99" />
-                        <br />
-                        <input id="calculate" type="button" value="Calculate Final Grade" />
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Pager-->
+                    <form>
+                        <div class="post-preview">
+                            <h2 class="post-title">Grade Calculator</h2>
+                            <h6>Enter the percentage for each type of grade (which are weighted differently)</h6>
+                            <label>Assignments (50%): </label>
+                            <input id="assignment" type="number" />
+                            <br />
+                            <label>Group Projects (10%): </label>
+                            <input id="groupProject" type="number" />
+                            <br />
+                            <label>Quizzes (10%): </label>
+                            <input id="quiz" type="number" />
+                            <br />
+                            <label>Midterm Exam (10%): </label>
+                            <input id="midtermExam" type="number" />
+                            <br />
+                            <label>Final Exam (10%): </label>
+                            <input id="finalExam" type="number" />
+                            <br />
+                            <label>INTEX (10%): </label>
+                            <input id="intex" type="number" />
+                            <br />
+                            <br />
+                            <div style="text-align:center;">
+                                <input align="center" id="calcButton" type="button" value="Calculate Final Grade" />
+                            </div>
+                            <p align="center" id="finalGrade"></p>
+                        </div>
+                    </form>
                 </div>
             </div>
+            <!-- Footer-->
+            <footer class="border-top">
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-md-10 col-lg-8 col-xl-7">
+                            <div class="small text-center text-muted fst-italic">Copyright &copy; Dallin Blanc 2022</div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Bootstrap core JS-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Core theme JS-->
+            <script src="lib/jquery/jquery-3.6.3.min.js"></script>
+            <script src="lib/bootstrap/js/scripts.js"></script>
+            <script src="js/GradeCalc.js"></script>
         </div>
-        <!-- Footer-->
-        <footer class="border-top">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Dallin Blanc 2022</div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="lib/bootstrap/js/scripts.js"></script>
-        <script src="js/GradeCalc.js"></script>
     </body>
 </html>
