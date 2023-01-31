@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     $("#calcButton").click(function () {
 
+        // Using these variables cleans up the look of the "total" calculation below
         var assignments = parseFloat($("#assignment").val()) * 0.5;
         var groupProject = parseFloat($("#groupProject").val()) * 0.1;
         var quizzes = parseFloat($("#quiz").val()) * 0.1;
@@ -8,10 +9,12 @@
         var finalExam = parseFloat($("#finalExam").val()) * 0.1;
         var intex = parseFloat($("#intex").val()) * 0.1;
 
+        // Here is the calculation for the total percentage
         var total = assignments + groupProject + quizzes + midtermExam + finalExam + intex;
 
         var letterGrade = "";
 
+        // determining which letter the grade should be
         if (total >= 94) {
             letterGrade = "A";
         }
@@ -49,6 +52,7 @@
             letterGrade = "E";
         }
 
+        // this will allow the final grade as a letter and percentage be printed out in the index.html page
         $("#finalGrade").html("Final Grade: " + letterGrade + " " + total.toFixed(2) + "%");
     });
 });
